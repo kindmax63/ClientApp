@@ -26,7 +26,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/contacts">Контакты</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pay_order">Оплатить займ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/get_order">Получить займ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/order">Получить займ</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">О сервисе</a></li>
                 </ul>
 

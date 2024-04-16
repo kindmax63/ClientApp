@@ -2,14 +2,34 @@
 <@t.template>
 
     <div class="container">
-        <label for="customRange2" class="form-label">Требуемая сумма</label>
-        <input class="form-control" type = "text" name = "need_amount" id="need_amount"/><br/>
+        <div class="calculator">
+        <div class="row">
+            <div class="col">
+                <label for="customRange2" class="form-label">Требуемая сумма</label>
+            </div>
+            <div class="col">
+                <input class="form-control" type = "text" name = "need_amount" id="need_amount"/><br/>
+            </div>
+        </div>
+
         <input type="range" class="form-range" min="0" max="30000" id="customRange2">
-        <label for="customRange3" class="form-label">Срок</label>
-        <input class="form-control" type = "text" name = "period_credit" id="period_credit"/><br/>
+
+        <div class="row">
+            <div class="col">
+                <label for="customRange3" class="form-label">Срок</label>
+            </div>
+            <div class="col">
+                <input class="form-control" type = "text" name = "period_credit" id="period_credit"/><br/>
+            </div>
+        </div>
         <input type="range" class="form-range" min="0" max="30" id="customRange3">
+
         <label for="customRange3" class="form-label">Процент сервиса, % руб.</label>
         <input class="form-control" type = "text" name = "percent_credit" id="percent_credit"/><br/>
+        </div>
+
+        <button><a class="lead" href="/order">Получить займ</a></button>
+
     </div>
 
     <script>
@@ -23,10 +43,6 @@
 
         inputNeedAmount.value = 0;
         inputPeriodCredit.value = 0;
-
-        inputValue2.oninput = function() {
-            inputNeedAmount.innerHTML = inputValue2.value;
-        };
 
         inputNeedAmount.addEventListener('input', () => {
             if (inputNeedAmount.value <= 5000){
@@ -55,6 +71,7 @@
             if (inputElement3.value > 14 || inputPeriodCredit.value > 14){
                 inputPercentCredit.value = parseInt(inputNeedAmount.value) + parseInt(inputNeedAmount.value) * 0.2;
             }
+            inputElement3.value = inputPeriodCredit.value;
         })
 
 
