@@ -11,5 +11,7 @@ public class MVCConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
       registry.addResourceHandler("/templates/**");
       registry.addResourceHandler("/static/images/**");
+      registry.addResourceHandler("/css/**");
+      registry.addResourceHandler("/scss/**");
     }
 }
